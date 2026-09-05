@@ -1,0 +1,64 @@
+config frr 'global'
+	option enabled '0'
+	option hostname 'OpenWrt'
+	option log_level 'informational'
+
+config bgp 'bgp'
+	option enabled '0'
+	option keepalive '60'
+	option holdtime '180'
+	option distance_ebgp '20'
+	option distance_ibgp '200'
+	option distance_local '200'
+	option maxpath_ebgp '8'
+	option maxpath_ibgp '8'
+	option gr_period '120'
+
+config ospf 'ospf'
+	option enabled '0'
+	option distance_intra '110'
+	option distance_inter '110'
+	option distance_external '110'
+	option spf_delay '200'
+	option spf_hold '1000'
+	option spf_max '5000'
+
+config ospf6 'ospf6'
+	option enabled '0'
+
+config rip 'rip'
+	option enabled '0'
+	option version '2'
+	option distance '120'
+
+config ripng 'ripng'
+	option enabled '0'
+	option distance '120'
+
+config isis 'isis'
+	option enabled '0'
+	option name 'main'
+	option is_type 'level-1-2'
+	option metric_style 'wide'
+
+config eigrp 'eigrp'
+	option enabled '0'
+	option name '1'
+
+config babel 'babel'
+	option enabled '0'
+
+config pim 'pim'
+	option enabled '0'
+
+config pim6 'pim6'
+	option enabled '0'
+
+config ldp 'ldp'
+	option enabled '0'
+
+config sr 'sr'
+	option enabled '0'
+	option mpls_te '0'
+	option gb_lower '16000'
+	option gb_upper '16999'

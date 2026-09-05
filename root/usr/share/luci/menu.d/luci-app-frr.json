@@ -1,0 +1,7 @@
+{
+	"admin/network/frr": {
+		"action": { "type": "view", "path": "frr/main" },
+		"order": 60,
+		"title": "FRR 动态路由"
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"luci-app-frr": {
+		"description": "Grant access to FRR management",
+		"read": {
+			"uci": ["frr"],
+			"ubus": {
+				"rc": ["status"],
+				"service": ["list"]
+			},
+			"file": {
+				"/usr/sbin/frr-uci-export --check": ["exec"],
+				"/usr/sbin/frr-status": ["exec"],
+				"/usr/bin/vtysh -c *": ["exec"],
+				"/bin/ls /sys/class/net": ["exec"]
+			}
+		},
+		"write": {
+			"uci": ["frr"],
+			"file": {
+				"/usr/sbin/frr-uci-export": ["exec"],
+				"/usr/bin/vtysh -c *": ["exec"]
+			}
+		}
+	}
+}

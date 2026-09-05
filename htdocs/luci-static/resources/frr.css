@@ -1,0 +1,41 @@
+/* luci-app-frr: unify field widths with the page (theme default is too narrow).
+   NB: material theme wraps inputs in an extra div — use descendant selectors. */
+.cbi-value-field input.cbi-input-text,
+.cbi-value-field input.cbi-input-password,
+.cbi-value-field select.cbi-input-select,
+.cbi-dynlist .cbi-input-text {
+	min-width: 26rem;
+	width: 60%;
+	max-width: 100%;
+}
+.cbi-section-table-row input.cbi-input-text,
+.cbi-section-table-row select.cbi-input-select {
+	min-width: 12rem;
+	width: 95%;
+}
+/* status/route tables fill the field column, fixed layout keeps IPv4/IPv6 aligned */
+#frr-status-box pre {
+	max-height: 3.2rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+#frr-matrix-box table,
+#frr-routes-box table {
+	width: 100%;
+	table-layout: fixed;
+}
+#frr-matrix-box table th,
+#frr-routes-box table th { text-align: left; }
+/* 协议/距离/度量 内容短 → 窄列；其余三列分掉剩余宽度 */
+#frr-routes-box table th:nth-child(1),
+#frr-routes-box table th:nth-child(3),
+#frr-routes-box table th:nth-child(4) { width: 8%; }
+#frr-routes-box table th:nth-child(2) { width: 24%; }
+#frr-routes-box table th:nth-child(5) { width: 30%; }
+#frr-routes-box table th:nth-child(6) { width: 22%; }
+#frr-routes-box table td, #frr-routes-box table th {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

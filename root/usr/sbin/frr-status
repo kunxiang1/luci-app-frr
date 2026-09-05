@@ -1,0 +1,32 @@
+#!/bin/sh
+# frr-status — one-shot vtysh status snapshot with a hard per-command timeout.
+# vtysh can hang on a half-open daemon socket; rpcd is single-threaded so a
+# hung child wedges all RPC. This wrapper guarantees each call returns within
+# N seconds so rpcd is never blocked. BusyBox has no `timeout` applet, hence
+# the manual background+kill.
+to() { # to <secs> <cmd...>
+	# NB: watchdog + cmd must NOT inherit our stdout — rpcd's file.exec
+	# waits for EOF on the pipe, an orphaned `sleep` would hold it open.
+	out=$(mktemp)
+	secs=$1; shift
+	"$@" </dev/null >"$out" 2>&1 &
+	p=$!
+	( sleep "$secs" </dev/null >/dev/null 2>&1; kill -9 "$p" 2>/dev/null ) &
+	k=$!
+	wait "$p" 2>/dev/null
+	kill "$k" 2>/dev/null
+	cat "$out"
+	rm -f "$out"
+}
+echo "===IFACES==="
+ls /sys/class/net
+echo "===PIDS==="
+ls /var/run/frr 2>/dev/null | sed -n 's/\.pid$//p'
+echo "===VERSION==="
+to 3 /usr/bin/vtysh -c "show version"
+echo "===DAEMONS==="
+to 3 /usr/bin/vtysh -c "show daemons"
+echo "===ROUTE4==="
+to 3 /usr/bin/vtysh -c "show ip route"
+echo "===ROUTE6==="
+to 3 /usr/bin/vtysh -c "show ipv6 route"
