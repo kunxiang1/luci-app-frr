@@ -4,7 +4,9 @@
 > 调研原始材料在 `research/`（openwrt/packages frr 打包源码、FRR 官方文档 HTML、
 > 深信服 AF 参考页截图与前端 JS、CDP 端到端验证脚本）。
 > v1→v2 的变化：范围从 3 协议扩到全部 15 标签；5 个视图文件合并为单页 main.js；
-> 删除 po/（中文内联）与独立 status.js；新增 frr-status 包装脚本；reload 改为 restart。
+> 独立 status.js 并入 main.js 状态区；新增 frr-status 包装脚本；reload 改为 restart；
+> po/ 先删后加——中文为源语言（msgid=中文），po/zh_Hans 恒等映射 + po/templates/*.pot
+> 官方扫描器生成，供他人改翻译。
 
 ---
 
@@ -85,6 +87,9 @@ luci-app-frr/
 │   ├── usr/sbin/frr-status                    # 一次性状态快照（vtysh 硬超时包装）
 │   ├── usr/share/luci/menu.d/luci-app-frr.json   # 网络 → FRR 动态路由（type=view path=frr/main）
 │   └── usr/share/rpcd/acl.d/luci-app-frr.json    # uci.frr 读写 + file.exec 白名单
+├── po/
+│   ├── templates/luci-app-frr.pot         # feeds/luci/build/i18n-scan.pl 生成（新语言起点）
+│   └── zh_Hans/luci-app-frr.po            # 中文源语言恒等映射；luci.mk 自动出 luci-i18n-frr-zh-cn 子包
 └── scripts/test-export.sh                     # 生成器自检（stub uci，断言输出）
 ```
 
@@ -149,10 +154,24 @@ config sr 'sr'        enabled mpls_te gb_lower gb_upper lb_lower lb_upper node_m
 
 - 底部按钮：取消左、保存在右（LuCI 默认已符合）。
 - 单页 `m.tabbed=true`，每协议一个顶层标签；协议内 `s.tab()` 分子标签（BGP 6 子标签等）。
+- 文案中文为源语言（msgid），全部走 `_()`；翻译层见 po/（§3.5）。
 - 卡片常显，**不用 depends 隐藏字段**（用户明确要求）。
 - 接口一律下拉：单值 `form.ListValue`（ifaceValue），多选 `form.MultiValue`（ifaceMulti），
   选项来自 `L.frr.ifaces()`（`/bin/ls /sys/class/net`，非 netifd RPC）。
 - 校验中文提示，取值范围照抄 AF schema。
+
+### 3.5 翻译层（OpenWrt 官方规则）
+
+- 所有 UI 字符串走 `_()`，msgid 即中文（源语言）。
+- `po/templates/luci-app-frr.pot`：用 `feeds/luci/build/i18n-scan.pl htdocs root` 生成，
+  含 menu.d 的 title 与 ACL description。改了界面文案后重新生成并 `msgmerge -U` 同步各语言 po。
+- `po/zh_Hans/luci-app-frr.po`：msgstr=msgid 恒等。**po2lmo 会跳过恒等条目**（源码
+  `key_id != val_id` 判断），所以 zh-cn.lmo 只含被真正改译的条目；运行时未命中的字符串
+  回退显示 msgid（中文），UI 不受影响。这是官方设计，不是打包错误。
+- 新语言：复制 .pot 到 `po/<BCP47 tag>/luci-app-frr.po`（目录名是 BCP-47 如 zh_Hans，
+  产物后缀是 LuCI 别名如 zh-cn），填 msgstr；luci.mk 按 LUCI_LANG_<tag> 配置自动出
+  `luci-i18n-frr-<alias>` 子包（HIDDEN，DEPENDS 主包）。
+- 验证链：`msgfmt -c`（语法）→ `po2lmo x.po x.lmo && strings x.lmo`（确认非恒等条目入目录）。
 
 ## 4. 状态采集设计（本项目最大的坑，务必先读）
 

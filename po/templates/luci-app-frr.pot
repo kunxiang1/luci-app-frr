@@ -1,0 +1,1085 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:203
+msgid "0 表示关闭保持计时器；心跳时间应小于保持时间的 1/3。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:495
+msgid "1-16，可选。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:539
+msgid "1-254，默认 100。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:509
+msgid "128-255，可选。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:429
+msgid "AS 号 / 命名"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:259
+msgid "AS 路径集合"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:551
+msgid "BFD"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:188
+msgid "BGP"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:247
+msgid "BGP 聚合地址"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:230
+msgid "BGP 邻居"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:440
+msgid "Babel"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:522
+msgid "Binding SID 标签"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:517
+msgid "Color"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/api.js:86
+msgid "Configuration written to FRR and reloaded."
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:215
+msgid "EBGP 最大路径数"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:209
+msgid "EBGP 路由管理距离"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:427
+msgid "EIGRP"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:519
+msgid "Endpoint"
+msgstr ""
+
+#: potsrc/root/usr/share/luci/menu.d/luci-app-frr.json:5
+msgid "FRR 动态路由"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:156
+msgid "FRR 动态路由套件"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:157
+msgid ""
+"FRR（FRRouting）是一套开源动态路由套件，包含 BGP、OSPF、RIP、IS-IS、EIGRP、"
+"Babel、PIM、LDP、VRRP、BFD 等主流路由协议的完整实现，兼容 Quagga 并遵循 IETF "
+"标准。本界面将配置统一写入 UCI，保存后自动生成 /etc/frr 配置并重载守护进程。"
+"详见"
+msgstr ""
+
+#: potsrc/root/usr/share/rpcd/acl.d/luci-app-frr.json:3
+msgid "Grant access to FRR management"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:217
+msgid "IBGP 最大路径数"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:211
+msgid "IBGP 路由管理距离"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:191
+msgid "IPv4 单播"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:463
+msgid "IPv6"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:192
+msgid "IPv6 单播"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:402
+msgid "ISIS"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:418
+msgid "ISIS 接口"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:470
+msgid "LDP"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:327
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:379
+msgid "MD5"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:409
+msgid "NET 地址"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:305
+msgid "NSSA"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:300
+msgid "OSPF 区域"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:318
+msgid "OSPF 接口"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:263
+msgid "OSPFv2"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:334
+msgid "OSPFv3"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:450
+msgid "PIM"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:456
+msgid "PIM 接口"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:501
+msgid "Prefix/Node SID"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:481
+msgid "Prefix/Node Segment"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:282
+msgid "RFC1583 兼容"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:343
+msgid "RIP"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:374
+msgid "RIP 接口"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:385
+msgid "RIPng（IPv6）"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:454
+msgid "RP 地址 (IPv4)"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:466
+msgid "RP 地址 (IPv6)"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:507
+msgid "SID 值"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:505
+msgid "SID 类型"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:288
+msgid "SPF 最大间隔（毫秒）"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:284
+msgid "SPF 计算延迟（毫秒）"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:286
+msgid "SPF 计算间隔（毫秒）"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:515
+msgid "SR-TE Policy"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:482
+msgid "SR-TE 策略"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:486
+msgid "SRGB 与 Prefix SID 随 IS-IS 进程下发；SR-TE 策略由 pathd 守护进程承载。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:489
+msgid "SRGB 结束标签"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:487
+msgid "SRGB 起始标签"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:483
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:527
+msgid "Segment-List"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:479
+msgid "Segment-Routing"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:305
+msgid "Stub"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:498
+msgid "TED 导入来源"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:537
+msgid "VRID"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:534
+msgid "VRRP"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:507
+msgid "absolute：16-1048575；index：0-65535。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:433
+msgid "default（全部接口）"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/api.js:19
+msgid "frr-uci-export failed: %s"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:487
+msgid "global-block lower bound，16-1048575。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:489
+msgid "global-block upper bound。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:491
+msgid "local-block，可选。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:498
+msgid "mpls-te import，可选。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:517
+msgid "policy color，0-4294967295。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:521
+msgid "policy name，可选。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:429
+msgid "router eigrp 后的名称或 AS 号。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:408
+msgid "router isis 后的名称。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:529
+msgid "segment-list 名称。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:571
+msgid "vtysh 配置行"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:159
+msgid "。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:511
+msgid "上游节点以 explicit-null 替代 PHP。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:73
+msgid "下一跳"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:306
+msgid "不发送汇总"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:499
+msgid "不导入"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:327
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:379
+msgid "不认证"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:165
+msgid "主机名"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:513
+msgid "仅 index 型 SID 有效。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:260
+msgid "仅发布汇总"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:368
+msgid "以单播方式向这些地址发送更新。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:539
+msgid "优先级"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:203
+msgid "保持时间（秒）"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:524
+msgid "候选路径"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:244
+msgid "入站路由映射"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:163
+msgid "全局"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:548
+msgid "关闭"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:568
+msgid "其他协议（原始配置）"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:74
+msgid "出接口"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:245
+msgid "出站路由映射"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:503
+msgid "前缀"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:174
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:179
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:184
+msgid "加载中…"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:267
+msgid "区域"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:302
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:314
+msgid "区域 ID"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:304
+msgid "区域类型"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:69
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:115
+msgid "协议"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:177
+msgid "协议状态"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:474
+msgid "发现传输地址"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:17
+msgid "取值范围：%d-%d"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:564
+msgid "取消勾选则 shutdown。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:432
+msgid "只收不发，选择接口或 default（所有接口默认被动）。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:522
+msgid "可选。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:521
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:529
+msgid "名称"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:564
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:570
+msgid "启用"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:196
+msgid "启用 BGP"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:441
+msgid "启用 Babel"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:428
+msgid "启用 EIGRP"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:164
+msgid "启用 FRR"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:460
+msgid "启用 IGMP"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:407
+msgid "启用 ISIS"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:471
+msgid "启用 LDP"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:271
+msgid "启用 OSPFv2"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:335
+msgid "启用 OSPFv3"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:459
+msgid "启用 PIM"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:453
+msgid "启用 PIM (IPv4)"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:465
+msgid "启用 PIM (IPv6)"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:349
+msgid "启用 RIP"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:386
+msgid "启用 RIPng"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:497
+msgid "启用 SR-TE (pathd)"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:485
+msgid "启用 Segment-Routing"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:442
+msgid "在指定接口启用 Babel。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:421
+msgid "在此接口启用 ISIS（ip router isis）。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:476
+msgid "在该接口启用 LDP 发现。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:250
+msgid "地址族"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:274
+msgid "域内优先级"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:276
+msgid "域间优先级"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:189
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:264
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:344
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:403
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:451
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:480
+msgid "基本配置"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:278
+msgid "外部优先级"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:361
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:391
+msgid "失效时间（秒）"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:503
+msgid "如 10.0.0.1/32"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:312
+msgid "如 192.168.1.0/24"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:117
+msgid "守护进程"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:265
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:345
+msgid "定时器"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:220
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:224
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:268
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:310
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:312
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:366
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:430
+msgid "宣告网段"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:395
+msgid "宣告网段（IPv6）"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:238
+msgid "密码（MD5）"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:553
+msgid "对端地址"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:107
+msgid "已启用"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:205
+msgid "平滑重启"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:206
+msgid "平滑重启周期（秒）"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:72
+msgid "度量"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:412
+msgid "度量风格"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:321
+msgid "开销"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:201
+msgid "心跳包间隔（秒）"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:294
+msgid "总是"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:340
+msgid "总是通告默认路由"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:547
+msgid "抢占"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:143
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:269
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:347
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:405
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:442
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:452
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:476
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:557
+msgid "接口"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:237
+msgid "描述"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:200
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:273
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:308
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:337
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:369
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:455
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:473
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:475
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:542
+msgid "无效 IPv4 地址"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:221
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:313
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:367
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:431
+msgid "无效 IPv4 网段"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:234
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:554
+msgid "无效 IPv4/IPv6 地址"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:467
+msgid "无效 IPv6 地址"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:225
+msgid "无效 IPv6 网段"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:168
+msgid "无效主机名"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:504
+msgid "无效前缀"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:303
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:316
+msgid "无效区域 ID"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:520
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:556
+msgid "无效地址"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:257
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:396
+msgid "无效网段"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:93
+msgid "无法连接 vtysh——FRR 是否已安装并运行？"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:170
+msgid "日志级别"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:327
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:379
+msgid "明文"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:511
+msgid "显式空标签"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:305
+msgid "普通区域"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:240
+msgid "更新源"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:359
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:389
+msgid "更新间隔（秒）"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:280
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:356
+msgid "最大等价路由条数"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:241
+msgid "最大跳跃数"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:560
+msgid "最小发送间隔（毫秒）"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:562
+msgid "最小接收间隔（毫秒）"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:172
+msgid "服务状态"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:107
+msgid "未启用"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:91
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:109
+msgid "未运行"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:493
+msgid "本地块结束标签"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:491
+msgid "本地块起始标签"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:213
+msgid "本地路由管理距离"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:197
+msgid "本机 AS 号"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:240
+msgid "本端 IP 地址或接口名。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:555
+msgid "本端地址"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:222
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:223
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:226
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:227
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:291
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:292
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:338
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:339
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:370
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:371
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:397
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:398
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:415
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:416
+msgid "格式：协议[:度量值[:路由映射]]"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:446
+msgid "格式：地址族:协议[:度量值]"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:443
+msgid "格式：地址族:协议[:度量值]，如 ipv4:kernel"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:558
+msgid "检测倍数"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:530
+msgid "段条目"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:571
+msgid ""
+"每行一条命令，缩进用空格表示。用于 NHRP、Segment-Routing、PBR、FabricD 等未单"
+"独建模的协议。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:525
+msgid ""
+"每行一条，如 \"candidate-path preference 100 name CP1 explicit segment-list "
+"SL1\" 或 \"... dynamic\"。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:531
+msgid ""
+"每行一条，如 \"index 10 mpls label 16001\"、\"index 20 nai prefix "
+"10.1.2.1/32 iface 1\"、\"index 30 nai adjacency 10.1.20.1 10.1.20.2\"。邻接 "
+"SID 通过 nai adjacency 引用（FRR 不支持手工指派邻接 SID）。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:513
+msgid "清除 N 标志"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:363
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:393
+msgid "清除时间（秒）"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:243
+msgid "激活"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:302
+msgid "点分或整数，如 0"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:422
+msgid "点到点网络"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:350
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:545
+msgid "版本"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:116
+msgid "界面配置"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:272
+msgid "留空则自动选择。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:70
+msgid "目的网段"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:512
+msgid "禁止次末跳弹出 (no-php-flag)"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:164
+msgid "禁用后将停止所有路由守护进程。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:509
+msgid "算法"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:506
+msgid "索引"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:506
+msgid "绝对标签"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:346
+msgid "网络与重发布"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:409
+msgid "网络实体标题，如 49.0001.0000.0000.0001.00"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:323
+msgid "网络类型"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:194
+msgid "聚合地址"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:252
+msgid "聚合网段"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:495
+msgid "节点最大标签栈深度 (MSD)"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:541
+msgid "虚拟 IP 地址"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:537
+msgid "虚拟路由器 ID，1-255。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:307
+msgid "虚连接（过渡区域路由器 ID）"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:331
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:377
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:432
+msgid "被动接口"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:366
+msgid "要宣告的网段，如 192.168.1.0/24"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:328
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:380
+msgid "认证密码"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:326
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:378
+msgid "认证方式"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:410
+msgid "设备类型"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:71
+msgid "距离"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:190
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:387
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:434
+msgid "路由优先级"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:352
+msgid "路由优先级（管理距离）"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:199
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:272
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:336
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:472
+msgid "路由器 ID"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:182
+msgid "路由表"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:222
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:226
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:266
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:291
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:338
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:370
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:397
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:404
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:415
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:443
+msgid "路由重发布"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:91
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:109
+msgid "运行中"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:408
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:421
+msgid "进程标签"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:543
+msgid "通告间隔（厘秒）"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:293
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:372
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:399
+msgid "通告默认路由"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:235
+msgid "邻居 AS 号"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:233
+msgid "邻居地址"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:193
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:368
+msgid "邻居配置"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:354
+msgid "重发布路由默认度量值"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:423
+msgid "链路类型"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:497
+msgid "需要安装 frr-pathd 软件包。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:436
+msgid "非等价负载均衡倍数"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:324
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:413
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:424
+msgid "默认"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:286
+msgid "默认 1000。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:363
+msgid "默认 120。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:361
+msgid "默认 180。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:284
+msgid "默认 200。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:359
+msgid "默认 30。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:288
+msgid "默认 5000。"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:296
+msgid "默认路由度量值"
+msgstr ""
+
+#: potsrc/htdocs/luci-static/resources/view/frr/main.js:66
+msgid "（无路由）"
+msgstr ""
