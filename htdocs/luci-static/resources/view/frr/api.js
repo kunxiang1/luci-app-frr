@@ -15,8 +15,11 @@ L.frr = {
 			params: ['command', 'params'],
 			expect: { '': {} }
 		})('/usr/sbin/frr-uci-export', []).then(function(res) {
-			if (res && res.code !== 0)
-				throw new Error(_('frr-uci-export failed: %s').format((res.stderr || res.stdout || '').trim()));
+			if (res && res.code !== 0) {
+				var out = ((res.stderr || res.stdout) || '').trim();
+				// code 6 = rpcd PERMISSION_DENIED (ACL mismatch), no stderr at all
+				throw new Error(_('frr-uci-export failed: %s').format(out || ('no output, rpcd code ' + res.code)));
+			}
 			return res;
 		});
 	},

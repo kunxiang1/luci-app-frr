@@ -181,8 +181,10 @@ vtysh 在守护进程 socket 半开时会无限挂起。五层防御：
 1. `load()` 只做 `uci.load('frr')` + `L.frr.ifaces()`（`/bin/ls`，两者永不挂）。
 2. 状态数据由 `frr-status` 采集：内部对每条 vtysh 用"后台 + 看门狗 `sleep;kill -9`"实现
    3 秒硬超时（BusyBox 无 `timeout` applet）。
-3. **看门狗与子命令必须 `</dev/null >/dev/null` 脱钩**——否则孤儿 `sleep` 继承 rpcd 的
-   stdout 管道，`file.exec` 等不到 EOF，同样堵死 rpcd（本次真机踩实）。
+3. **看门狗与子命令必须 `</dev/null >/dev/null` 脱钩**——否则孤儿 `sleep` 占住 rpcd 的
+   stdout 管道，`file.exec` 等不到 EOF，同样堵死 rpcd（本次真机踩实）；
+   **同理 `service frr restart` 也绝不能继承 stdout**：watchfrr 是常驻守护进程，
+   继承管道后永不关闭 → rpcd 永久挂起 → LuCI 报 "frr-uci-export failed:"（arm64 实测）。
 4. 前端对 status 再套 12 秒 JS `Promise.race` 兜底。
 5. vtysh 全挂时按 `/var/run/frr/*.pid`（PIDS 段）判定运行状态，不误报"未运行"。
 

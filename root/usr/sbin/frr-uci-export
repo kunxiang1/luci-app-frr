@@ -10,7 +10,7 @@ FFCONF=${FFCONF:-$CONFDIR/frr.conf}
 
 g() { uci -q get "frr.$1"; }
 on() { [ "$(g "$1")" = 1 ]; }
-hasbin() { [ -x "${BINDIR:-/usr/sbin}/$1" ]; }   # skip config for daemons whose package isn't installed
+hasbin() { [ -x "${BINDIR:-/usr/sbin}/$1" ] || [ -x "/usr/lib/frr/$1" ]; }   # skip config for daemons whose package isn't installed; /usr/lib/frr = upstream FRR default path
 gl() { g "$1" | tr ' ' '\n'; }          # list entries, one per line
 secids() { uci -q show frr | sed -n "s/^frr\.\([^=.]*\)=${1}$/\1/p"; }
 on_any() { [ -n "$(secids "$1")" ]; }   # any section of type exists
@@ -447,10 +447,14 @@ fi
 rm -f "$tc" "$td"
 
 if ! on global.enabled; then
-	service frr stop 2>/dev/null
+	service frr stop </dev/null >/dev/null 2>&1
 	exit 0
 fi
 [ "$changed" = 1 ] || exit 0
+# fds MUST be redirected: restart spawns watchfrr (a long-lived daemon) which
+# would otherwise inherit our stdout pipe; rpcd's file.exec waits for EOF on
+# that pipe and hangs forever (watchfrr never closes it). Same class of bug as
+# the frr-status watchdog.
 # ponytail: always restart — init's reload() races watchfrr restart with frr-reload and
 # can leave daemons dead (observed 10.4.1). Upgrade: vtysh-write + frr-reload when flaps matter.
-service frr restart
+service frr restart </dev/null >/dev/null 2>&1

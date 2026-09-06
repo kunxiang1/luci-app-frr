@@ -21,22 +21,22 @@
 
 ## 支持的协议与生成内容
 
-| 标签            | UCI section                                              | 守护进程      | 生成配置块                                                                                      |
-| --------------- | -------------------------------------------------------- | ------------- | ----------------------------------------------------------------------------------------------- |
-| 全局            | `global`                                                 | —             | hostname / log syslog / daemons 总开关                                                          |
-| BGP             | `bgp` + `bgp_neighbor` + `bgp_aggregate`                 | bgpd          | `router bgp`（v4/v6 地址族、邻居、聚合、重发布）                                                |
-| OSPFv2          | `ospf` + `ospf_area` + `ospf_network` + `ospf_interface` | ospfd         | `router ospf` + `interface` 块（cost/网络类型/认证）                                            |
-| OSPFv3          | `ospf6`                                                  | ospf6d        | `router ospf6`                                                                                  |
-| RIP / RIPng     | `rip` / `ripng` + `rip_interface`                        | ripd / ripngd | `router rip(ng)`（版本/定时器/认证/被动接口）                                                   |
-| IS-IS           | `isis` + `isis_interface`                                | isisd         | `router isis` + `interface` 块（net/is-type/metric-style/SR）                                   |
-| EIGRP           | `eigrp`                                                  | eigrpd        | `router eigrp`（network/passive-interface/distance/variance）                                   |
-| Babel           | `babel` + `babel_interface`                              | babeld        | `router babel` + `interface` 块（wired/wireless）                                               |
-| PIM             | `pim` / `pim6` + `pim_interface`                         | pimd / pim6d  | `router pim(6)` + `interface` 块（ip pim/ip igmp）                                              |
-| LDP             | `ldp`                                                    | ldpd          | `mpls ldp`（router-id/address-family/interface）                                                |
-| Segment-Routing | `sr` + `sr_prefix` + `sr_seglist` + `sr_policy`          | isisd + pathd | IS-IS 内 `segment-routing`（SRGB/Prefix SID）+ pathd `traffic-eng`（SR-TE Policy/Segment-List） |
-| VRRP            | `vrrp`（多实例）                                         | vrrpd         | `interface` 块 `vrrp` 命令族                                                                    |
-| BFD             | `bfd`（多实例）                                          | bfdd          | `peer` 块（检测定时器/乘数）                                                                    |
-| 其他协议        | `raw`（多段）                                            | 任意          | 逐行透传 vtysh 配置                                                                             |
+| 标签 | UCI section | 守护进程 | 生成配置块 |
+|---|---|---|---|
+| 全局 | `global` | — | hostname / log syslog / daemons 总开关 |
+| BGP | `bgp` + `bgp_neighbor` + `bgp_aggregate` | bgpd | `router bgp`（v4/v6 地址族、邻居、聚合、重发布） |
+| OSPFv2 | `ospf` + `ospf_area` + `ospf_network` + `ospf_interface` | ospfd | `router ospf` + `interface` 块（cost/网络类型/认证） |
+| OSPFv3 | `ospf6` | ospf6d | `router ospf6` |
+| RIP / RIPng | `rip` / `ripng` + `rip_interface` | ripd / ripngd | `router rip(ng)`（版本/定时器/认证/被动接口） |
+| IS-IS | `isis` + `isis_interface` | isisd | `router isis` + `interface` 块（net/is-type/metric-style/SR） |
+| EIGRP | `eigrp` | eigrpd | `router eigrp`（network/passive-interface/distance/variance） |
+| Babel | `babel` + `babel_interface` | babeld | `router babel` + `interface` 块（wired/wireless） |
+| PIM | `pim` / `pim6` + `pim_interface` | pimd / pim6d | `router pim(6)` + `interface` 块（ip pim/ip igmp） |
+| LDP | `ldp` | ldpd | `mpls ldp`（router-id/address-family/interface） |
+| Segment-Routing | `sr` + `sr_prefix` + `sr_seglist` + `sr_policy` | isisd + pathd | IS-IS 内 `segment-routing`（SRGB/Prefix SID）+ pathd `traffic-eng`（SR-TE Policy/Segment-List） |
+| VRRP | `vrrp`（多实例） | vrrpd | `interface` 块 `vrrp` 命令族 |
+| BFD | `bfd`（多实例） | bfdd | `peer` 块（检测定时器/乘数） |
+| 其他协议 | `raw`（多段） | 任意 | 逐行透传 vtysh 配置 |
 
 > 邻接 SID 说明：FRR 不支持手工指派邻接 SID，界面通过 Segment-List 的
 > `nai adjacency <邻接器> <下一跳>` 条目引用，与官方行为一致。
@@ -114,6 +114,14 @@ htdocs/luci-static/resources/
   frr.css                                 # 栏位加宽 / 表格撑满页面 / 列宽分配
   view/frr/api.js                         # apply/status/vtysh/ifaces + m.save() 挂钩
   view/frr/main.js                        # 单页标签式主界面（15 标签）
+po/
+  templates/luci-app-frr.pot              # 官方 i18n-scan.pl 生成的模板（新语言的起点）
+  zh_Hans/luci-app-frr.po                 # 简体中文（msgid=msgstr 恒等；改 msgstr 即出翻译）
+scripts/
+  test-export.sh                          # 生成器自检（stub uci，断言输出，ALL PASSED）
+  rexec.py                                # 编译机远程执行辅助（paramiko）
+research/                                 # 调研存档：openwrt/packages frr 打包、FRR 文档、
+                                          # 参考界面截图、CDP 端到端验证脚本
 DESIGN.md                                 # 软件设计稿（架构与决策记录）
 ```
 
@@ -161,7 +169,10 @@ BGP/OSPF/RIP 三协议邻居建立与路由互学，`vtysh -b` 零错误。
 - 路由策略（route-map/prefix-list/access-list）未建模——用「其他协议（原始配置）」标签
   逐行输入，或继续 vtysh。需要时再按协议补 section。
 - 状态展示为手动刷新（进页面时拉取一次）；需要自动轮询时在 fillStatus 加 setInterval 即可。
-- 界面文案直接内嵌中文，无 po 翻译层（部署环境只有中文用户）。
+- 中文为源语言：界面文案以中文为 msgid，`po/zh_Hans` 的 msgstr 与 msgid 相同（恒等映射）。
+  po2lmo 会跳过恒等条目，所以 zh-cn.lmo 只含真正被改译的条目——这是官方设计，
+  运行时未命中 lmo 的字符串回退显示 msgid（中文），UI 不受影响。
+  做其他语言：复制 `po/templates/luci-app-frr.pot` 为 `po/<BCP47>/luci-app-frr.po` 填 msgstr 即可。
 
 ## 许可
 
