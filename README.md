@@ -141,6 +141,7 @@ DESIGN.md                                 # 软件设计稿（架构与决策记
   不匹配时返回 code 6（PERMISSION_DENIED），CLI 直接 ubus 调用则不受 ACL 限制——
   排查时别被 CLI 测试结果误导。
 - **本机 LuCI form.js 没有 `onaftersave`**，保存挂钩用包装 `m.save()` 实现（api.js bindApply）。
+- **`uci.save()` 只暂存到 rpcd 会话内存 delta，不落盘**；落盘在 `uci.apply`。bindApply 里必须先 `uci.apply(0,false)` 再跑 frr-uci-export，否则生成器读到的是旧值（表现为界面改了但 daemons/frr.conf 不变）。
 - **`rpc.declare({...})` 返回函数，必须立即 `()` 调用**。
 - **视图模块返回值必须是 `L.Class.extend({})`**，裸 `class` 会被 require 校验拒绝。
 - **section 对象不支持 `.depends()`**（只有 option 支持）；本界面按用户要求不做隐藏式联动，

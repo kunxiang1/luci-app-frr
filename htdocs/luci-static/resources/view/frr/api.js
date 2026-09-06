@@ -81,15 +81,26 @@ L.frr = {
 	// attach to a Map: after any save (plain or &-apply), regenerate frr.conf.
 	// This LuCI build has no onaftersave hook; every save path funnels through
 	// map.save(), so wrapping it is the single reliable interception point.
+	// IMPORTANT: uci.save() only STAGES changes into rpcd's session delta; they
+	// reach /etc/config only at uci.apply(). frr-uci-export runs as a separate
+	// process reading disk, so it must run AFTER the apply, not right after
+	// save (that race is why toggling OSPF left daemons ospfd=no).
+	// rollback=false: plain commit, no 3s auto-revert timer to confirm against.
+	callApply: rpc.declare({
+		object: 'uci', method: 'apply',
+		params: ['timeout', 'rollback'], reject: true
+	}),
 	bindApply: function(m) {
 		var origSave = m.save.bind(m);
 		m.save = function(cb, silent) {
 			return origSave(cb, silent).then(function() {
+				return L.frr.callApply(0, false);
+			}).then(function() {
 				return L.frr.apply().then(function() {
 					ui.addNotification(null, E('p', _('Configuration written to FRR and reloaded.')), 'info');
-				}).catch(function(e) {
-					ui.addNotification(null, E('p', e.message), 'error');
 				});
+			}).catch(function(e) {
+				ui.addNotification(null, E('p', e.message), 'error');
 			});
 		};
 	}
